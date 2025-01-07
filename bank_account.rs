@@ -108,8 +108,8 @@ impl Bank {
 
 fn main(){
     let mut new_bank = Bank::new("Beens Bank");
-    let account_one = Account::new(1, "Abinesh", 8000.0);
-    let account_two = Account::new(2, "Raj", 10000.0);
+    let account_one = Account::new(1, "name_one", 8000.0);
+    let account_two = Account::new(2, "name_two", 10000.0);
     new_bank.add_account(account_one);
     new_bank.add_account(account_two);
 
