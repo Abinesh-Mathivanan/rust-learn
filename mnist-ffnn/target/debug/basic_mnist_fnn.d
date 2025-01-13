@@ -1,0 +1,1 @@
+D:\Projects\rust-learn\mnist-ffnn\target\debug\basic_mnist_fnn.exe: D:\Projects\rust-learn\mnist-ffnn\src\dataset.rs D:\Projects\rust-learn\mnist-ffnn\src\main.rs D:\Projects\rust-learn\mnist-ffnn\src\network.rs D:\Projects\rust-learn\mnist-ffnn\src\utils.rs
