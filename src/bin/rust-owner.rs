@@ -1,3 +1,5 @@
+use std::rc::Rc;
+
 fn main(){
 
     /* 
@@ -21,12 +23,25 @@ fn main(){
         println!("{} {}", val.name, val.id);
     } */ 
 
-    let t = 5;
+    /* let t = 5;
     let s = t; 
     let input = [0, 1, 2, 3, 4];
     let dup = input;
     println!("{}", t);
     println!("{}", s);
     println!("{:?}", input);
-    println!("{:?}", dup);
+    println!("{:?}", dup); */ 
+
+    let s: Rc<String> = Rc::new("beens".to_string());
+    let t = s.clone();
+    let u = s.clone(); 
+
+    println!("{}", s);
+    println!("{}", t);
+    println!("{}", u);
+
+    println!("{}", Rc::strong_count(&s)); // to print the no of reference counts 
+
+    
+
 }
