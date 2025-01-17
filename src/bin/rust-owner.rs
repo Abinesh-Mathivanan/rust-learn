@@ -58,14 +58,18 @@ fn main(){
         println!("false");
     } */
 
-    fn factorial(n: usize) -> usize {
+    /* fn factorial(n: usize) -> usize {
         return (1..n+1).product();
     }
 
     let r = factorial(6);
     println!("{}", r + 5);
 
-    println!("{:p}", &r); // used to print pointer variable 
+    println!("{:p}", &r); // used to print pointer variable */ 
+
+    let v = vec![1, 2, 3, 4];
+    let r = &v[1];
+    println!("{:p} {:p}", &v, r);
 
 
 }
