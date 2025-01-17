@@ -42,7 +42,7 @@ fn main(){
 
     println!("{}", Rc::strong_count(&s)); // to print the no of reference counts */ 
 
-    let s = 5;
+    /* let s = 5;
     let t = 6;
 
     let rs = &s;
@@ -56,8 +56,16 @@ fn main(){
     }
     else {
         println!("false");
+    } */
+
+    fn factorial(n: usize) -> usize {
+        return (1..n+1).product();
     }
 
-    
+    let r = factorial(6);
+    println!("{}", r + 5);
+
+    println!("{:p}", &r); // used to print pointer variable 
+
 
 }
