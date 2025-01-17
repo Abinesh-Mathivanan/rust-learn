@@ -71,5 +71,16 @@ fn main(){
     let r = &v[1];
     println!("{:p} {:p}", &v, r);
 
+    fn smallest(v: &[i32]) -> &i32 {
+        let mut s = &v[0];
+        for r in &v[1..] {
+            if *r < *s { s = r }
+        }
+        s
+    }
+
+    let v = [1, 2, 0, 4];
+    let ans = smallest(&v);
+    print!("{}", ans);
 
 }
