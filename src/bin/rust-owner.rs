@@ -32,7 +32,7 @@ fn main(){
     println!("{:?}", input);
     println!("{:?}", dup); */ 
 
-    let s: Rc<String> = Rc::new("beens".to_string());
+    /* let s: Rc<String> = Rc::new("beens".to_string());
     let t = s.clone();
     let u = s.clone(); 
 
@@ -40,7 +40,23 @@ fn main(){
     println!("{}", t);
     println!("{}", u);
 
-    println!("{}", Rc::strong_count(&s)); // to print the no of reference counts 
+    println!("{}", Rc::strong_count(&s)); // to print the no of reference counts */ 
+
+    let s = 5;
+    let t = 6;
+
+    let rs = &s;
+    let rt = &t; 
+
+    let rrs = &rs; 
+    let rrt = &rt; 
+
+    if **rrt == t {
+        println!("true");
+    }
+    else {
+        println!("false");
+    }
 
     
 
