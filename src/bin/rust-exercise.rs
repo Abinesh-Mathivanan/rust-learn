@@ -34,3 +34,45 @@ fn main(){
     println!("{}", rect.isflexible(100));
 } */ 
 
+// fn binarysearch(arr: &Vec<i32>, size: usize, target: i32) -> bool {
+//     let mut start = 0; 
+//     let mut end = size - 1; 
+
+//     while start <= end {
+//         let mid = (start + end) / 2; 
+//         if arr[mid] == target {
+//             return true; 
+//         }
+//         else if arr[mid] < target {
+//             start = mid + 1;
+//         }
+//         else {
+//             end = mid - 1;
+//         }
+//     }
+//     return false;
+// }
+
+fn fibonacci(n: i32) -> i32 {
+    if n <= 1 {
+        return n;
+    }
+    return fibonacci(n-1) + fibonacci(n-2);
+}
+fn main(){
+    // let mut input = String::new();
+    // io::stdin()
+    //     .read_line(&mut input)
+    //     .expect("expect");
+    // let input_vec: Vec<i32> = input.trim().split_whitespace().flat_map(str::parse).collect();
+    // let result: bool = binarysearch(&input_vec, input_vec.len(), 10);
+    // print!("{}", result);
+
+    let mut input = String::new();
+    io::stdin()
+        .read_line(&mut input)
+        .expect("expect");
+    let number: i32 = input.trim().parse().expect("expected");
+    let nthfibonacci = fibonacci(number);
+    print!("{}", nthfibonacci);
+}
