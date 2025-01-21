@@ -59,6 +59,20 @@ fn fibonacci(n: i32) -> i32 {
     }
     return fibonacci(n-1) + fibonacci(n-2);
 }
+
+fn sumofvector(v: &Vec<i32>) -> i32 {
+    return v.iter().sum();
+}
+
+fn removeduplicates(v: Vec<i32>) -> Vec<i32> {
+    let mut final_vec = Vec::new();
+    for i in &v {
+        if !final_vec.contains(i) {
+            final_vec.push(*i);
+        }
+    }
+    return final_vec;
+}
 fn main(){
     // let mut input = String::new();
     // io::stdin()
@@ -68,11 +82,21 @@ fn main(){
     // let result: bool = binarysearch(&input_vec, input_vec.len(), 10);
     // print!("{}", result);
 
-    let mut input = String::new();
-    io::stdin()
-        .read_line(&mut input)
-        .expect("expect");
-    let number: i32 = input.trim().parse().expect("expected");
-    let nthfibonacci = fibonacci(number);
-    print!("{}", nthfibonacci);
+    // let mut input = String::new();
+    // io::stdin()
+    //     .read_line(&mut input)
+    //     .expect("expect");
+    // let number: i32 = input.trim().parse().expect("expected");
+    // let nthfibonacci = fibonacci(number);
+    // print!("{}", nthfibonacci);
+
+    let v = vec![1, 2, 3, 4, 4, 5, 6, 6];
+    let ans = sumofvector(&v);
+    let rem_vec = removeduplicates(v);
+    println!("{}", ans);
+    println!("{:?}", rem_vec);
+    let string = "malayalam";
+    let rev_string: String = string.chars().rev().collect();
+    println!("{}", string == rev_string);
+
 }
