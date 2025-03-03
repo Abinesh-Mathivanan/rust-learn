@@ -6,6 +6,9 @@ use std::io;
 //         .read_line(&mut input)
 //         .expect("expected string"); 
 //     let input_vec: Vec<&str> = input.trim().split_whitespace().collect(); 
+//     let num_input_vec : Vec<i32> = input.trim().split_whitespace().map(|x| x.parse().expect("invalid num")).collect(); 
+//     let input_str: String = num_input_vec.iter().map(ToString::to_string).collect();
+//     println("{:?}", num_input_vec);
 //     print!("{:?}", input_vec[0]);
 // }
 
